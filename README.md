@@ -1,34 +1,28 @@
-[![progress-banner](https://backend.codecrafters.io/progress/claude-code/e1d1496c-4551-478c-a100-c241689434dc)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# 🧠 Claude like llm from scratch
 
-This is a starting point for Python solutions to the
-["Build Your own Claude Code" Challenge](https://codecrafters.io/challenges/claude-code).
+This project is my implementation of an AI coding assistant inspired by Claude Code, built as part of the CodeCrafters challenge.
 
-Claude Code is an AI coding assistant that uses Large Language Models (LLMs) to
-understand code and perform actions through tool calls. In this challenge,
-you'll build your own Claude Code from scratch by implementing an LLM-powered
-coding assistant.
+Instead of treating it like a black box, this project focuses on understanding how LLM-powered agents actually work internally — including tool calling, reasoning loops, and API interactions.
 
-Along the way you'll learn about HTTP RESTful APIs, OpenAI-compatible tool
-calling, agent loop, and how to integrate multiple tools into an AI assistant.
+---
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+## 🚀 Overview
 
-# Passing the first stage
+The goal of this project is to build a minimal but functional coding assistant that can:
 
-The entry point for your `claude-code` implementation is in `app/main.py`. Study
-and uncomment the relevant code, and submit to pass the first stage:
+- Interact with an LLM via HTTP APIs
+- Understand and process user prompts
+- Perform tool/function calls
+- Run in an agent loop (think → act → observe → repeat)
 
-```sh
-codecrafters submit
-```
+---
 
-# Stage 2 & beyond
+## 🏗️ Architecture
 
-Note: This section is for stages 2 and beyond.
+Core components:
 
-1. Ensure you have `uv` installed locally.
-2. Run `./your_program.sh` to run your program, which is implemented in
-   `app/main.py`.
-3. Run `codecrafters submit` to submit your solution to CodeCrafters. Test
-   output will be streamed to your terminal.
+- **LLM Interface**  
+  Handles API calls and responses from the language model
+
+- **Agent Loop**  
+  Controls the reasoning cycle:
